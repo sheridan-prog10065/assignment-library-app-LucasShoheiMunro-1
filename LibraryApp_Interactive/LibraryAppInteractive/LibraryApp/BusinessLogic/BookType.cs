@@ -4,7 +4,10 @@ using System.Text;
 
 namespace LibraryAppInteractive.BusinessLogic
 {
-    public class BookType
+    public enum BookType
     {
+        Paper = 1,
+        Digital,
+        Audio
     }
 }

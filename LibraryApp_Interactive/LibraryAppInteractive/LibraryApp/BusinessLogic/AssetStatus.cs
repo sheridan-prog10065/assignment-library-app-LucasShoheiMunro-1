@@ -6,5 +6,9 @@ namespace LibraryAppInteractive.BusinessLogic
 {
     public enum AssetStatus
     {
+        NotAvailable,
+        Available,
+        Loaned,
+        Reserved
     }
 }
