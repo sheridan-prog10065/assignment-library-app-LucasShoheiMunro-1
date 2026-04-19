@@ -38,9 +38,12 @@ namespace LibraryAppInteractive.BusinessLogic
         /// <returns></returns>
         public override LibraryAsset BorrowBook()
         {
-            var asset = findNextAvailableAsset();
-            if (asset != null) asset.Status = AssetStatus.Loaned;
-            return asset;
+            // Set a variable to the given book provided by user.
+            // var asset = findNextAvailableAsset();
+
+            // Check if the book exists, then set it's status to loeaned.
+            // if (asset != null) asset.Status = AssetStatus.Loaned;
+            return null;
         }
 
         /// <summary>
@@ -50,8 +53,11 @@ namespace LibraryAppInteractive.BusinessLogic
         /// <returns></returns>
         public override (TimeSpan, int, decimal) ReturnBook(int libID)
         {
-            var asset = findLibraryAsset(libID);
-            if (asset != null) asset.Status = AssetStatus.Available;
+            // Set a variable to the ID of a book chosen.
+            // var asset = findLibraryAsset(libID);
+
+            // Check if ID exists, then sets it's status to available.
+            // if (asset != null) asset.Status = AssetStatus.Available;
             return (TimeSpan.Zero, 0, 0m);
         }
     }
