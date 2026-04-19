@@ -4,10 +4,24 @@ using System.Text;
 
 namespace LibraryAppInteractive.BusinessLogic
 {
+    /// <summary>
+    /// A struct that represents the loan period of a book.
+    /// </summary>
     public struct LoanPeriod
     {
+        /// <summary>
+        /// The date a book was borrowed on.
+        /// </summary>
         private DateTime _borrowedOn;
+
+        /// <summary>
+        /// The date a book was returned on.
+        /// </summary>
         private DateTime _returnedOn;
+
+        /// <summary>
+        /// The date a book must be returned by.
+        /// </summary>
         private DateTime _dueDate;
 
         public DateTime BorrowedOn
@@ -33,7 +47,6 @@ namespace LibraryAppInteractive.BusinessLogic
             get { return _returnedOn - _borrowedOn; }
         }
 
-        
         public TimeSpan LatePeriod
         {
             get
@@ -42,6 +55,11 @@ namespace LibraryAppInteractive.BusinessLogic
             }
         }
 
+        /// <summary>
+        /// Constructor for LoanPeriod.
+        /// </summary>
+        /// <param name="borrowedOn"></param>
+        /// <param name="returnedOn"></param>
         public LoanPeriod(DateTime borrowedOn, DateTime returnedOn)
         {
             _borrowedOn = borrowedOn;
